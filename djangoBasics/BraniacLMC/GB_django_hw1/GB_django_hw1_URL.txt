@@ -1,7 +1,0 @@
-Two-three levels
-https://habr.com/ru/post/491916/
-Anchor
-https://karpov.courses/ml-hard#FAQ
-Get requests
-http://0.0.0.0:8000/news.html?dateFrom=2021-05-01&dateTo=2022-05-01#\
-https://helix.ru/catalog/client/analizy-dlya-zhenschin?tags=62\
