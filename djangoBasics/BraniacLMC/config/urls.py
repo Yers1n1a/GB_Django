@@ -22,8 +22,7 @@ from django.views.generic import RedirectView
 app_name = MainapConfig.name
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='mainap/')),
+    path('admin/', admin.site.urls),
     path('mainap/', include('mainap.urls')),
-
 ]
