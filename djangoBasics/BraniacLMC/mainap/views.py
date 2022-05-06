@@ -4,10 +4,11 @@ from django.views.generic import View
 from django.views.generic import TemplateView
 from django.urls import resolve
 from datetime import datetime, timedelta
+import json
 
 
 # def check_kwargs(request, **kwargs):
-#     return HttpResponse(f'kwartgs:<br>{kwargs}')
+#     return HttpResponse(f'kwargs:<br>{kwargs}')
 #
 #
 # class HeloWorldView(View):
@@ -24,6 +25,9 @@ class NewsPageView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        with open('mainap/templates/mainap/news.json') as file:
+            stock = json.load(file)
+        context['json_news'] = stock
         context['object_list'] = [
             {
                 'news_title': 'Первый новостной заголовок',
@@ -88,6 +92,7 @@ class ContactsPageView(TemplateView):
             }
         ]
         return context
+
 
 class DocSitePageView(TemplateView):
     template_name = 'mainap/doc_site.html'
