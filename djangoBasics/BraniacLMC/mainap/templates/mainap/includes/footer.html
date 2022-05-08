@@ -10,9 +10,9 @@
                 </p>
                 <p>
                 <ul class="list-unstyled">
-                    <li><a href="/mainap/">Домашняя</a></li>
-                    <li><a href="/mainap/news/">Новости</a></li>
-                    <li><a href="/mainap/login/">Войти</a></li>
+                    <li><a href=" {% url 'mainap:main_page' %}">Домашняя</a></li>
+                    <li><a href="{% url 'mainap:news' %}">Новости</a></li>
+                    <li><a href="{% url 'mainap:login' %}">Войти</a></li>
                 </ul>
                 </p>
             </div>
@@ -25,7 +25,7 @@
                     <li><a href="#">Положения &amp; Условия</a></li>
                     <li><a href="#">Конфиденциальность &amp; Cookies</a></li>
                     <li><a href="#">Документация по API</a></li>
-                    <li><a href="/mainap/doc_site/">Документация по сайту</a></li>
+                    <li><a href="{% url 'mainap:doc_site' %}">Документация по сайту</a></li>
                 </ul>
                 </p>
             </div>
@@ -55,7 +55,7 @@
         </div>
         <div class="row justify-content-center">
             <div>
-                <p><small>&copy; GeekBrains 2021</small></p>
+                <p><small>&copy; GeekBrains 2022</small></p>
             </div>
         </div>
     </div>
