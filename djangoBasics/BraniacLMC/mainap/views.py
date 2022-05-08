@@ -59,6 +59,14 @@ class NewsPageView(TemplateView):
         return context
 
 
+class NewsPageViewWithPaginator(NewsPageView):
+
+    def get_context_data(self, page, **kwargs):
+        context = super().get_context_data(page=page, **kwargs)
+        context['page_num'] = page
+        return context
+
+
 class CoursesPageView(TemplateView):
     template_name = 'mainap/courses_list.html'
 

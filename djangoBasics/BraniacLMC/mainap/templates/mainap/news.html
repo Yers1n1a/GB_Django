@@ -73,11 +73,11 @@
 <div class="row justify-content-center align-items-center mt-3 mb-n3">
   <nav aria-label="Page navigation example">
     <ul class="pagination">
-      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="{% url 'mainap:news_paginator' 1 %}?param1=foobar">Previous</a></li>
       {% for news_item in json_news %}
       <li class="page-item"><a class="page-link" href="#{{ news_item.news_number }}">{{ news_item.news_number }}</a></li>
       {% endfor %}
-      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      <li class="page-item"><a class="page-link" href="{% url 'mainap:news_paginator' 10 %}">Next</a></li>
     </ul>
   </nav>
 </div>
