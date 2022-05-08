@@ -16,6 +16,30 @@
       </div>
     </div>
     {% endfor %}
+    <div class="card my-2">
+      <div class="card-body">
+        <a name='7'></a>
+        <h5 class="card-title">Новость со ссылкой</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Дата не установлена</h6>
+        <p class="card-text">Какой-то текст со
+        <a href="https://yandex.ru/search/?lr=116256&text=курс+доллара&src=suggest_B"
+           class="card-link" target='_blank'>ссылкой</a>
+        </p>
+        <a href="#7" class="card-link">Подробнее</a>
+      </div>
+    </div>
+    <div class="card my-2">
+      <div class="card-body">
+        <a name='8'></a>
+        <h5 class="card-title">Новость со ссылкой и Get параметром</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Дата не установлена</h6>
+        <p class="card-text">Какой-то текст со
+        <a href="#1"
+           class="card-link">ссылкой</a>
+        </p>
+        <a href="#8" class="card-link">Подробнее</a>
+      </div>
+    </div>
   </div>
 
   <div class="col-lg-4">
@@ -33,7 +57,7 @@
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Дата до...</span>
+              <span class="input-group-text" id="basic-addon2">Дата до...</span>
             </div>
             <input type="date" class="form-control" name="dateTo">
           </div>
@@ -58,8 +82,5 @@
   </nav>
 </div>
 
-
-
-    </div>
 
 {% endblock content %}
