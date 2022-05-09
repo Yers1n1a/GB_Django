@@ -70,6 +70,41 @@ class NewsPageViewWithPaginator(NewsPageView):
 class CoursesPageView(TemplateView):
     template_name = 'mainap/courses_list.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['object_list'] = [
+            {
+                'course_picture': 'img/course001.jpg',
+                'course_name': 'Web Python',
+                'course_number': 1
+            }, {
+                'course_picture': 'img/course002.jpg',
+                'course_name': 'Web Golang',
+                'course_number': 2
+            }, {
+                'course_picture': 'img/course003.jpg',
+                'course_name': 'Web JavaScript',
+                'course_number': 3
+            }, {
+                'course_picture': 'img/course004.jpg',
+                'course_name': 'Web Java',
+                'course_number': 4
+            }, {
+                'course_picture': 'img/course005.jpg',
+                'course_name': 'Web PHP',
+                'course_number': 5
+            }, {
+                'course_picture': 'img/course006.jpg',
+                'course_name': 'Python AI',
+                'course_number': 6
+            }, {
+                'course_picture': 'img/course007.jpg',
+                'course_name': 'DevOps',
+                'course_number': 7
+            }
+        ]
+        return context
+
 
 class ContactsPageView(TemplateView):
     template_name = 'mainap/contacts.html'
