@@ -23,6 +23,6 @@ app_name = MainapConfig.name
 
 urlpatterns = [
     path('', RedirectView.as_view(url='mainap/')),
+    path('mainap/', include('mainap.urls', namespace='mainap')),
     path('admin/', admin.site.urls),
-    path('mainap/', include('mainap.urls')),
 ]
