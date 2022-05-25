@@ -1,0 +1,36 @@
+[{
+  "model": "mainap.news",
+  "pk": 1,
+  "fields": {
+    "title": "News001",
+    "preamble": "SomeNewNews001",
+    "body": "News001Body",
+    "body_as_markdown": false,
+    "created": "2022-05-23T19:09:04.351Z",
+    "updated": "2022-05-23T19:09:04.352Z",
+    "deleted": false}
+}, {
+  "model": "mainap.news",
+  "pk": 2,
+  "fields": {
+    "title": "News002",
+    "preamble": "SomeNewNews002",
+    "body": "News002Body",
+    "body_as_markdown": false,
+    "created": "2022-05-23T19:10:27.752Z",
+    "updated": "2022-05-23T19:10:27.752Z",
+    "deleted": false}
+}, {
+  "model": "mainap.news",
+  "pk": 3,
+  "fields": {
+    "title": "News003",
+    "preamble": "SomeNewNews003",
+    "body": "News003Body",
+    "body_as_markdown": false,
+    "created": "2022-05-23T19:13:28.830Z",
+    "updated": "2022-05-23T19:13:28.830Z",
+    "deleted": false
+  }
+}
+]
