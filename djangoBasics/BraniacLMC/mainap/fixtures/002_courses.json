@@ -1,6 +1,6 @@
 [
   {
-    "model": "mainapp.courses",
+    "model": "mainap.courses",
     "pk": 1,
     "fields": {
       "name": "Web Python",
@@ -13,7 +13,7 @@
     }
   },
   {
-    "model": "mainapp.courses",
+    "model": "mainap.courses",
     "pk": 2,
     "fields": {
       "name": "Web Golang",
@@ -26,7 +26,7 @@
     }
   },
   {
-    "model": "mainapp.courses",
+    "model": "mainap.courses",
     "pk": 3,
     "fields": {
       "name": "Web JavaScript",
@@ -39,7 +39,7 @@
     }
   },
   {
-    "model": "mainapp.courses",
+    "model": "mainap.courses",
     "pk": 4,
     "fields": {
       "name": "Web Java",
@@ -52,7 +52,7 @@
     }
   },
   {
-    "model": "mainapp.courses",
+    "model": "mainap.courses",
     "pk": 5,
     "fields": {
       "name": "Web PHP",
@@ -65,7 +65,7 @@
     }
   },
   {
-    "model": "mainapp.courses",
+    "model": "mainap.courses",
     "pk": 6,
     "fields": {
       "name": "Python AI",
@@ -78,7 +78,7 @@
     }
   },
   {
-    "model": "mainapp.courses",
+    "model": "mainap.courses",
     "pk": 7,
     "fields": {
       "name": "DevOps",
@@ -91,7 +91,7 @@
     }
   },
   {
-    "model": "mainapp.courses",
+    "model": "mainap.courses",
     "pk": 8,
     "fields": {
       "name": "3D-моделирование",

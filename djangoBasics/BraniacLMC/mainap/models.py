@@ -9,6 +9,9 @@ class BaseModel(models.Model):
         self.deleted = True
         self.save()
 
+    class Meta:
+        abstract = True
+
 
 class News(BaseModel):
     title = models.CharField(max_length=256, verbose_name="Title")
