@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib import messages
 from django.urls import reverse
 from django.utils.safestring import mark_safe
@@ -10,7 +10,7 @@ from django.views.generic import TemplateView
 from authap.models import User
 
 
-class LoginPageView(TemplateView):
+class CustomLoginView(LoginView):
     template_name = 'authap/login.html'
 
 
@@ -49,15 +49,30 @@ class RegisterView(TemplateView):
                 messages.add_message(request, messages.WARNING, new_user)
                 return HttpResponseRedirect(reverse('mainap:main_page'))
 
-class LogoutView(TemplateView):
+
+class CustomLogoutView(LogoutView):
     pass
 
 
 class EditView(TemplateView):
-    pass
+    template_name = 'authap/edit.html'
 
+    def post(self, request, *args, **kwargs):
 
+        if request.POST.get('username'):
+            request.user.username = request.POST.get('username')
+        if request.POST.get('first_name'):
+            request.user.first_name = request.POST.get('first_name')
+        if request.POST.get('last_name'):
+            request.user.last_name = request.POST.get('last_name')
+        if request.POST.get('email'):
+            request.user.email = request.POST.get('email')
+        if request.POST.get('age'):
+            request.user.age = request.POST.get('age')
 
+        request.user.save()
+        messages.add_message(request, messages.INFO, 'Редактирование успешно')
+        return HttpResponseRedirect(reverse('authap:edit'))
 
 # class CustomLoginView(LoginView):
 #     def form_valid(self, form):

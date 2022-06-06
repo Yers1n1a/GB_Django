@@ -1,0 +1,42 @@
+[
+  {
+    "model": "authap.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$dREFXGAe0tYPtFBlItpuWd$De5Mhiu1uquthLsRcP9BDcKxZPqYDLYxCwGfgzbEeN0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "1",
+      "first_name": "afasf",
+      "last_name": "sdfsfgs",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-31T16:18:37.043Z",
+      "email": "y@rambler.ru",
+      "age": 31,
+      "avatar": "user_0/avatars/1",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authap.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$ua284dukEB3fdW1OjmeGwV$BiUQpQ65kW4k4Nt6OHbD+E0r3PJZpwMuu8tbC1XZYlM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "pavel",
+      "first_name": "pavel",
+      "last_name": "sado",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-06-02T18:35:32.163Z",
+      "email": "pavel@rambler.ru",
+      "age": 32,
+      "avatar": "user_0/avatars/1_I9yxtF5",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

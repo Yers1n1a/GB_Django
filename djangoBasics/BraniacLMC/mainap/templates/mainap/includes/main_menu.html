@@ -36,6 +36,18 @@
                     <li class="nav-item {% if request.resolver_match.view_name == 'mainap:contacts' %} active{% endif %}">
                         <a class="nav-link" href="{% url 'mainap:contacts' %}">Контакты</a>
                     </li>
+                    {% if user.is_authenticated %}
+                        <li>
+                         <a class="nav-link" href="{% url 'authap:edit' %}">{{ user.username|default:'Вы не авторизованы' }}</a>
+                        </li>
+                        <li>
+                         <a class="nav-link" href="{% url 'authap:logout' %}">Выход</a>
+                        </li>
+                    {% else %}
+                        <li>
+                         <a class="nav-link" href="{% url 'authap:login' %}">Вход</a>
+                        </li>
+                    {% endif %}
                 </ul>
                 <span><a href="#">🇷🇺</a> <i class="fas fa-grip-lines-vertical"></i> <a href="#">🇬🇧</a></span>
             </div>
