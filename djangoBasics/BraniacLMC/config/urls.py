@@ -27,7 +27,8 @@ urlpatterns = [
     path('', RedirectView.as_view(url='mainap/')),
     path('mainap/', include('mainap.urls', namespace='mainap')),
     path('admin/', admin.site.urls),
-    path('authap/', include('authap.urls', namespace='authap'))
+    path('authap/', include('authap.urls', namespace='authap')),
+    path('social_auth/', include('social_django.urls', namespace='social'))
 ]
 
 # добавляется для работы джанго с медиа
