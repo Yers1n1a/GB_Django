@@ -1,0 +1,65 @@
+{% extends 'authap/base.html' %}
+
+{% block content %}
+
+<h2>Редактирование пользователя</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>
+            <input value={{user.username}} type="text" name="username" autocapitalize="none"
+                   maxlength="150" class="textinput textInput form-control"
+                   required="" id="id_username" placeholder="Имя пользователя">
+        </p>
+        <p>
+            <input value={{user.email}} type="text" name="email" autocapitalize="none"
+                   maxlength="150" class="textinput textInput form-control"
+                   required="" id="id_email" placeholder="Email">
+        </p>
+{#        <p>#}
+{#            <input type="password" name="password" maxlength="150"#}
+{#                   class="textinput textInput form-control" required=""#}
+{#                   id="id_password" placeholder="Пароль">#}
+{#        </p>#}
+{#        <p>#}
+{#            <input type="password" name="password2" maxlength="150"#}
+{#                   class="textinput textInput form-control" required=""#}
+{#                   id="id_password2" placeholder="Подтверждение пароля">#}
+{#        </p>#}
+        <p>
+            <input value={{user.first_name}} type="text" name="first_name" maxlength="150"
+                   class="textinput textInput form-control" required=""
+                   placeholder="Имя">
+        </p>
+        <p>
+            <input value={{user.last_name}} type="text" name="last_name" maxlength="150"
+                   class="textinput textInput form-control" required=""
+                   placeholder="Фамилия">
+        </p>
+        <p>
+            <input value={{user.age}} type="number" name="age"
+                   class="textinput textInput form-control" required=""
+                   placeholder="Возраст">
+{#        </p>#}
+{#            <input type="file" name="avatar"#}
+{#                   class="textinput textInput form-control" required=False#}
+{#                   placeholder="Аватар">#}
+{#        </p>#}
+        <p>
+            <button type="submit" class="btn btn-primary btn-block"> Сохранить </button>
+        </p>
+    </form>
+
+{% endblock content %}
+
+
+{% block js %}
+    <script>
+        $(document).ready(function () {
+            {% if messages %}
+                // Toasts
+                $(".toast").toast({delay: 5000});
+                $(".toast").toast("show");
+            {% endif %}
+        });
+    </script>
+{% endblock js %}

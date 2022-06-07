@@ -1,6 +1,7 @@
 from django.db import models
 
-NULLALLOW = {'blank': True, 'null': True}
+
+NULLALLABLE = {'blank': True, 'null': True}
 # body = models.TextField(blank=True, null=True, verbose_name="Body")
 
 
@@ -16,7 +17,7 @@ class BaseModel(models.Model):
 class News(BaseModel):
     title = models.CharField(max_length=256, verbose_name="Title")
     preamble = models.CharField(max_length=1024, verbose_name="Preamble")
-    body = models.TextField(**NULLALLOW, verbose_name="Body")
+    body = models.TextField(**NULLALLABLE, verbose_name="Body")
     body_as_markdown = models.BooleanField(default=False, verbose_name="As markdown")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Created", editable=False)
     updated = models.DateTimeField(auto_now=True, verbose_name="Edited", editable=False)
@@ -49,7 +50,7 @@ class Lesson(BaseModel):
     course = models.ForeignKey(Courses, on_delete=models.CASCADE)
     num = models.PositiveIntegerField(verbose_name="Lesson number")
     title = models.CharField(max_length=256, verbose_name="Name")
-    description = models.TextField(verbose_name="Description", **NULLALLOW)
+    description = models.TextField(verbose_name="Description", **NULLALLABLE)
     description_as_markdown = models.BooleanField(verbose_name="As markdown", default=False)
     created = models.DateTimeField(auto_now_add=True, verbose_name="Created", editable=False)
     updated = models.DateTimeField(auto_now=True, verbose_name="Edited", editable=False)

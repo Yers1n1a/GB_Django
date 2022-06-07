@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.staticfiles.storage import staticfiles_storage
 from django.urls import path, include
 from mainap import views
 from mainap.apps import MainapConfig
